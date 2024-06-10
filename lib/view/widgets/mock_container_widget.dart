@@ -30,7 +30,7 @@ class MockContainer extends StatelessWidget {
                       height: 40,
                       width: 50,
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(31, 66, 65, 65),
+                        color: const Color.fromARGB(31, 66, 65, 65),
                         border: const Border(
                             bottom: BorderSide(width: 0.4),
                             top: BorderSide(width: 0.4),
@@ -50,7 +50,7 @@ class MockContainer extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               Container(

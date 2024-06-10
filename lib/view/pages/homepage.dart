@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
           children: [
             const ContainerWidget(),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
+              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 0),
               child: Align(
                 alignment: Alignment.topLeft,
                 child: Column(
@@ -35,17 +35,37 @@ class HomePage extends StatelessWidget {
                       height: 15,
                     ),
                     ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          minimumSize: const Size(500, 50),
-                          backgroundColor: Colors.blue,
-                        ),
+                        // style: ElevatedButton.styleFrom(
+                        //   minimumSize: const Size(500, 50),
+                        //   backgroundColor: Colors.blue,
+                        // ),
+                        style: ButtonStyle(
+                            minimumSize:
+                                MaterialStatePropertyAll(Size(500, 50)),
+                            elevation: const MaterialStatePropertyAll(0),
+                            backgroundColor:
+                                MaterialStatePropertyAll(Colors.blue),
+                            shape: MaterialStatePropertyAll(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10)))),
                         onPressed: () {},
-                        child: const Text(
-                          "Explore Cources  >",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20),
+                        child: const Padding(
+                          padding: EdgeInsets.only(left: 70),
+                          child: Row(
+                            children: [
+                              Text(
+                                "Explore Cources",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20),
+                              ),
+                              Icon(
+                                Icons.arrow_forward_ios,
+                                color: Colors.white,
+                              )
+                            ],
+                          ),
                         )),
                     const SizedBox(
                       height: 15,
@@ -74,10 +94,10 @@ class HomePage extends StatelessWidget {
                     const SizedBox(
                       height: 15,
                     ),
-                    Container(
+                    SizedBox(
                       height: 320,
                       width: MediaQuery.sizeOf(context).width,
-                      child: ListviewWidget(),
+                      child: const ListviewWidget(),
                     )
                   ],
                 ),

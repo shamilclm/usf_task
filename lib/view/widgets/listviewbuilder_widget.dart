@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class ListviewWidget extends StatelessWidget {
   const ListviewWidget({super.key});
@@ -26,9 +25,13 @@ class ListviewWidget extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.asset(
-                    'assets/images/depositphotos_133078960-stock-photo-cute-smiling-boy.jpg',
-                    width: 220,
+                  Container(
+                    decoration:
+                        BoxDecoration(borderRadius: BorderRadius.circular(10)),
+                    child: Image.asset(
+                      'assets/images/depositphotos_133078960-stock-photo-cute-smiling-boy.jpg',
+                      width: 220,
+                    ),
                   ),
                   const SizedBox(
                     height: 7,
@@ -40,18 +43,30 @@ class ListviewWidget extends StatelessWidget {
                   const SizedBox(
                     height: 10,
                   ),
-                  const Row(
+                  Row(
                     children: [
-                      Icon(Icons.battery_5_bar_rounded),
-                      Text('54'),
-                      SizedBox(
+                      Icon(
+                        Icons.battery_5_bar_rounded,
+                        color: Colors.black.withOpacity(.5),
+                      ),
+                      Text(
+                        '54',
+                        style: TextStyle(color: Colors.black.withOpacity(.5)),
+                      ),
+                      const SizedBox(
                         width: 20,
                       ),
-                      Icon(Icons.lock_clock),
-                      Text('48 Hrs'),
+                      Icon(
+                        Icons.lock_clock,
+                        color: Colors.black.withOpacity(.5),
+                      ),
+                      Text(
+                        '48 Hrs',
+                        style: TextStyle(color: Colors.black.withOpacity(.5)),
+                      ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   const Row(
@@ -69,7 +84,7 @@ class ListviewWidget extends StatelessWidget {
             ),
           );
         },
-        separatorBuilder: (context, index) => SizedBox(
+        separatorBuilder: (context, index) => const SizedBox(
               width: 10,
             ),
         itemCount: 5);

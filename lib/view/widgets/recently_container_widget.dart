@@ -55,7 +55,7 @@ class RecentlyContainer extends StatelessWidget {
             ],
           ),
           SizedBox(
-            width: 15,
+            width: 8,
           ),
           CircularPercentIndicator(
             radius: 30,

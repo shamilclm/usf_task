@@ -7,21 +7,21 @@ class ContainerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Container(
-          height: 300,
+        SizedBox(
+          height: 250,
           child: Image.asset(
             'assets/images/Rectangle 27 (2).jpg',
           ),
         ),
         const Positioned(
-            top: 60,
+            top: 40,
             left: 40,
             child: Text(
               "9:30",
               style: TextStyle(color: Colors.white),
             )),
         Positioned(
-            top: 80,
+            top: 60,
             left: 20,
             child: Row(
               children: [
@@ -49,11 +49,11 @@ class ContainerWidget extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(
-                  width: 40,
+                  width: 45,
                 ),
                 Container(
-                  height: 60,
-                  width: 130,
+                  height: 50,
+                  width: 120,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50),
                       color: Colors.black54),
@@ -76,7 +76,7 @@ class ContainerWidget extends StatelessWidget {
               ],
             )),
         Positioned(
-          top: 150,
+          top: 126,
           left: 20,
           child: Row(
             children: [
